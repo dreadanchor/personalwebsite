@@ -6,6 +6,7 @@ Este é o repositório do meu site pessoal! Aqui, organizo minhas tarefas diári
 Então, para acessar é o seguinte
 
 ```bash
+cd Lair
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements
