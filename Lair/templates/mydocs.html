@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<h2 style="text-align: center">MYDOCS</h2>
+
+<div class="cards-grid">
+    {% for skill in stack %}
+    <div class="card">
+        <img src="{{ stack[skill]['img'] }}" alt="{{ skill }}">
+        <a href="/mydocs/{{ skill }}" class="doc-button">Ver docs de  {{ skill }}</a>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

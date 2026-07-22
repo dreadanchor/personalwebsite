@@ -1,0 +1,389 @@
+@font-face {
+    font-family: "ULTRAKILL";
+    src: url("VCR_OSD_MONO_1.001.ttf") format("truetype");
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "ULTRAKILL", sans-serif;
+}
+
+/*
+   CORREÇÃO DA FONTE: Garante que inputs e botões
+   usem a fonte ULTRAKILL do body por padrão
+*/
+input, button, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* ---------- HEADER ---------- */
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+header a {
+    text-decoration: none;
+
+    color: #2563eb;
+    border: 2px solid #2563eb;
+
+    padding: .8rem 1.5rem;
+
+    transition: .2s;
+}
+
+header a:hover {
+    background: #2563eb;
+    color: white;
+}
+
+/* ---------- CONTEÚDO ---------- */
+
+.alignedsection {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+
+    width: min(1200px, 90%);
+    margin: auto;
+}
+
+/* ---------- CARDS ---------- */
+
+.missions,
+.quests {
+    flex: 1;
+
+    border: 2px solid black;
+
+    background: white;
+
+    padding: 1.5rem;
+
+    margin-bottom: 1rem; /*Sim só bottom*/
+}
+
+.missions h2,
+.quests h2 {
+    margin-bottom: 1rem;
+}
+
+.missions ul,
+.quests ul {
+    list-style: none;
+}
+
+/* ---------- INPUTS E BOTÕES DO FORM (QUESTS) ---------- */
+
+/* Estiliza os inputs de texto do formulário */
+.quests input[type="text"] {
+    border: 2px solid black;
+    padding: 0.4rem 0.6rem;
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+    background: transparent;
+    outline: none;
+}
+
+/* Estiliza os placeholders para ficarem cinzas */
+.quests input::placeholder {
+    color: #aaa;
+}
+
+/*
+   BOTÕES ESTILO HEADER:
+   Adicionar e Done agora seguem o mesmo padrão visual azul do topo
+*/
+.quests button,
+.quests input[type="submit"] {
+    background: white;
+    color: #2563eb;
+    border: 2px solid #2563eb;
+    padding: 0.4rem 1.2rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: 0.2s;
+}
+
+/* Efeito Hover - Inverte as cores igual aos links do Header */
+.quests button:hover,
+.quests input[type="submit"]:hover {
+    background: #2563eb;
+    color: white;
+}
+
+/* Efeito de clique físico */
+.quests button:active,
+.quests input[type="submit"]:active {
+    transform: scale(0.95);
+}
+
+/* Alinhamento do botão "Done" dentro da lista de quests */
+.quests li {
+    padding: .7rem 0;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quests li:last-child {
+    border-bottom: none;
+}
+
+/* Agrupa o título e a descrição da quest na esquerda */
+.quest-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.quests li p {
+    font-size: small;
+    color: gray;
+}
+
+/* ---------- MISSIONS (CHECKBOXES) ---------- */
+
+.missions li {
+    display: flex;
+    align-items: center;
+    padding: .6rem 0;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+}
+
+.missions li:last-child {
+    border-bottom: none;
+}
+
+.missions input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.pixel-checkbox input {
+    display: none;
+}
+
+.checkmark {
+    width: 20px;
+    height: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid black;
+    flex-shrink: 0;
+}
+
+.checkmark::after {
+    font-size: 14px;
+    line-height: 1;
+}
+
+.pixel-checkbox input:checked + .checkmark::after {
+    content: "X";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "ULTRAKILL";
+    color: red;
+}
+
+/*-----MYDOCS-----*/
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    width: min(1200px, 90%);
+    margin: 2rem auto;
+    justify-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    border: 2px solid black;
+    background: white;
+    width: 100%;
+    max-width: 250px;
+    padding: 1.5rem 1rem;
+}
+
+.card img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    object-fit: contain;
+}
+
+.card a {
+    text-decoration: none;
+    color: #2563eb;
+    border: 2px solid #2563eb;
+    padding: .6rem 1rem;
+    transition: .2s;
+    text-align: center;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+.card a:hover {
+    background: #2563eb;
+    color: white;
+}
+
+/*-----markdown-----*/
+
+.docs {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+
+    background: white;
+    border: 2px solid black;
+
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+/* ---------------- TITULOS ---------------- */
+
+.docs h1,
+.docs h2,
+.docs h3,
+.docs h4{
+    margin-top: 40px;
+    margin-bottom: 15px;
+
+    font-weight: bold;
+}
+
+.docs h1{
+    font-size: 40px;
+    text-align:center;
+}
+
+.docs h2{
+    font-size:30px;
+}
+
+.docs h3{
+    font-size:24px;
+}
+
+/* ---------------- PARÁGRAFOS ---------------- */
+
+.docs p{
+    margin:15px 0;
+    text-align: justify;
+}
+
+/* ---------------- LISTAS ---------------- */
+
+.docs ul,
+.docs ol{
+    margin-left:30px;
+    margin-bottom:20px;
+}
+
+.docs li{
+    margin:6px 0;
+}
+
+/* ---------------- LINKS ---------------- */
+
+.docs a{
+    color:#245bff;
+    text-decoration:none;
+}
+
+.docs a:hover{
+    text-decoration:underline;
+}
+
+/* ---------------- CITAÇÕES ---------------- */
+
+.docs blockquote{
+    border-left:5px solid #245bff;
+    padding-left:15px;
+    color:#555;
+    margin:20px 0;
+}
+
+/* ---------------- CÓDIGO ---------------- */
+
+.docs code{
+    background:#f3f3f3;
+    padding:2px 5px;
+    border-radius:4px;
+    font-family:monospace;
+}
+
+.docs pre{
+    background:#222;
+    color:white;
+
+    padding:20px;
+
+    border-radius:8px;
+
+    margin:20px 0;
+
+    overflow-x:auto;
+}
+
+.docs pre code{
+    background:none;
+    padding:0;
+    color:inherit;
+}
+
+/* ---------------- TABELAS ---------------- */
+
+.docs table{
+    border-collapse:collapse;
+    width:100%;
+    margin:20px 0;
+}
+
+.docs th,
+.docs td{
+    border:1px solid #aaa;
+    padding:10px;
+}
+
+.docs th{
+    background:#eee;
+}
+
+.docs img{
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+}

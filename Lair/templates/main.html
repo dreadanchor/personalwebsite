@@ -1,0 +1,75 @@
+{% extends 'layout.html' %}
+
+{% block content%}
+
+<div class="alignedsection">
+    <section class="missions">
+        <h2>TODAY'S MISSIONS</h2>
+        <ul>
+            {% for mission in todays_missions %}
+
+            <li>
+                {{ mission }}
+                <label class="pixel-checkbox">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+            </li>
+
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section class="quests">
+        <h2>QUESTS</h2>
+        <ul>
+
+            <form action="/add" method="post">
+
+                <input
+                        type="text"
+                        name="titulo"
+                        placeholder="Título"
+                >
+
+                <input
+                        type="text"
+                        name="descricao"
+                        placeholder="Descrição"
+                >
+
+                <button type="submit">
+                    Adicionar
+                </button>
+
+            </form>
+
+            {% for quest in quests %}
+
+            <li style="display: flex; flex-direction: row; align-items: center; justify-content: space-between;">
+
+                <div>
+                    {{ quest["titulo"] }}
+                    <p>{{ quest["descricao"] }}</p>
+                </div>
+
+                <form
+                        action="/delete/{{ loop.index0 }}"
+                        method="post"
+                >
+
+                    <button type="submit" style="">
+                        Done
+                    </button>
+
+                </form>
+
+            </li>
+
+            {% endfor %}
+        </ul>
+    </section>
+</div>
+
+{% endblock %}
+
