@@ -11,8 +11,8 @@ venv/
 .idea/
 
 # Dados da aplicação
-data/quests.csv
-data/missions.py
+Lair/data/quests.csv
+Lair/data/missions.py
 
 # Logs
 *.log
