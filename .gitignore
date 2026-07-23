@@ -12,7 +12,7 @@ venv/
 
 # Dados da aplicação
 data/quests.csv
-data/todays_missions.csv
+data/missions.py
 
 # Logs
 *.log
