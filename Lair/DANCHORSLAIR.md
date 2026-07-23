@@ -1,9 +1,0 @@
-# DREADANCHOR'S LAIR
-## 1. QUEST SYSTEM
-O site terá um sistema de criar "quests" pra me ajudar a organizar minha vida, cada quest tem seu título, detalhes na forma de dropdown e botões laterais para excluir quest ou marcar como resolvida. A persistência desses dados pode ser em CSV mesmo, no formato quest_name,description. É interessante mostrar tanto as quests que não foram concluidas como guardar as que foram concluidas ao invés de exclui-las.
-## 2. MYDOCS
-O MYDOCS é uma parte do site onde poderei escrever documentação pra estudar minha STACK, ou seja, quando eu aprender algo sobre alguma linguagem, irei registrar, e quando precisar dessa informação poderei simplesmente consultar minha documentação pessoal. Isso por si só poderia ser outro site, o que seria bem melhor pro meu Github... mas enfim. É a melhor forma de estudar e acompanhar meu conhecimento e minha stack!
-## 3. TODAY'S MISSION
-O nome foi inspirado naquele canal do Youtube que ficou bem famoso por um tempo. A ideia aqui é que o site automaticamente na página inicial vai mostrar uma lista de tarefas que eu tinha naquele dia baseada na versão da rotina, que será armazenado em json, e no dia da semana em que o site foi aberto com o uso de alguma biblioteca Python! A ideia aqui é que o site sempre escolhe a versão mais recente da minha rotina, de um dicionário onde as chaves são números, e ele sempre escolhe o maior. O dicionário contém outro diciónario onde as chaves são dias da semana, e cada um armazena uma lista de missões diárias que teoricamente precisavam ser realizadas naquele dia. Simples não?
-## GOOD LUCK DEV!
-Leitor de MD, Cards, etc.
