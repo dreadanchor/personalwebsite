@@ -1,5 +1,5 @@
-# DREADANCHOR'S LAIR
-Este é o repositório do meu site pessoal! Aqui, organizo minhas tarefas diárias e ideias futuras. A ideia aqui é que este é o site que abre toda vez que abro o Firefox.
+# Personal Website
+Esse é meu site pessoal para criar documentações que me ajudam a estudar, criar tarefas específicas e temporárias (quests) e acompanhar metas diárias. Nem o código nem a organização estão perfeitos mas dá pro gasto
 
 ---
 
@@ -9,8 +9,7 @@ Então, para acessar é o seguinte
 cd Lair
 python -m venv venv
 source venv/bin/activate
-pip install -r requirements
+pip install -r requirements.txt
 python app.py
 ```
-"Ah mas eu uso Windows"
-Se vira
+"Ah mas eu uso Windows", vai pesquisar
