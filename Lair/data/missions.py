@@ -1,6 +1,6 @@
 missions = [
-  [ # Férias
-      [], # Segunda
+  [ # Nome da sua rotina
+      ["task1", "task2"], # Segunda
       [], # Terça
       [], # Quarta
       [], # Quinta
