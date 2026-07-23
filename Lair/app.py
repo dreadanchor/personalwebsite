@@ -2,7 +2,7 @@ from flask import Flask, render_template, redirect, request, abort
 from markdown import markdown
 from data.missions import missions
 from datetime import datetime
-from static.tools.csv import load_quests, save_quests
+from tools.csv import load_quests, save_quests
 from docs.stack import stack
 
 app = Flask(__name__)
