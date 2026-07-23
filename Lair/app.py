@@ -1,9 +1,8 @@
 from flask import Flask, render_template, redirect, request, abort
 from markdown import markdown
-from data.missions import missions
+from data import missions, stack
+from tools import load_quests, save_quests
 from datetime import datetime
-from tools.csv import load_quests, save_quests
-from docs.stack import stack
 
 app = Flask(__name__)
 
