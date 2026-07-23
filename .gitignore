@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# VS Code
+.vscode/
+
+# JetBrains
+.idea/
+
+# Dados da aplicação
+data/quests.csv
+data/todays_missions.csv
+
+# Logs
+*.log
